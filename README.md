@@ -43,4 +43,4 @@ firebase
 - Use HTTP client to test the API or use the [Swagger UI](https://notes-api.gerrymie.site/swagger)
 
 
-if you are using the local api you need to clone the UI and run it to get the access token
+if you are using the local api you need to clone the [UI](https://github.com/Gerry-Mie/note-ui) and run it to get the access token
