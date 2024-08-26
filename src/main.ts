@@ -5,10 +5,11 @@ import * as compression from 'compression';
 import helmet from 'helmet';
 import { useSwagger } from '@app/core/swagger';
 import * as admin from 'firebase-admin';
-import * as path from 'path';
 import * as process from 'node:process';
 
-const serviceAccount = path.join(process.cwd(), 'google-service-account.json');
+const serviceAccountKey = Buffer.from(process.env.GOOGLE_SERVICE_ACCOUNT, 'base64').toString('utf8');
+const serviceAccount = JSON.parse(serviceAccountKey);
+
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
 });

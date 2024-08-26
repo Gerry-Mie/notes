@@ -9,6 +9,9 @@ export class Config {
     @IsString()
     DB_NAME: string;
 
+    @IsString()
+    GOOGLE_SERVICE_ACCOUNT: string;
+
     public static validate(config: Record<string, unknown>) {
         const validatedConfig = plainToInstance(Config, config);
 
