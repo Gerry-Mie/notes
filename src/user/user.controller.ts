@@ -7,8 +7,8 @@ import { UpdateUserPermissionDto } from './dto/update-user-permission.dto';
 import { User } from './user.model';
 
 @ApiBearerAuth()
-@ApiTags('user')
-@Controller('user')
+@ApiTags('users')
+@Controller('users')
 export class UserController {
     constructor(private userService: UserService) {}
 
