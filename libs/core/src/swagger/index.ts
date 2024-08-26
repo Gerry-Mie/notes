@@ -10,6 +10,7 @@ export const useSwagger = (app: INestApplication) => {
         .setDescription(loadMD('swagger/doc.md', 'core'))
         .addBearerAuth()
         .addServer('http://localhost:3000', 'local')
+        .addServer('https://notes-api.gerrymie.site', 'staging')
         .setVersion('1.0')
         .build();
 

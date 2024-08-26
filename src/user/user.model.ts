@@ -6,6 +6,10 @@ import { AbstractDocument } from '@app/core/mongo/abstract/abstract.document';
 @Schema({ timestamps: true })
 export class User {
     @ApiProperty()
+    @Prop({ unique: true })
+    uid: string;
+
+    @ApiProperty()
     @Prop()
     name: string;
 
@@ -16,6 +20,10 @@ export class User {
     @ApiProperty()
     @Prop({ unique: true })
     email: string;
+
+    @ApiProperty()
+    @Prop({ default: false })
+    isAdmin?: boolean;
 }
 
 export type UserDocument = HydratedDocument<User & AbstractDocument>;
