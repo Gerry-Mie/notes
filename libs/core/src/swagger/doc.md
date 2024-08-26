@@ -24,13 +24,13 @@ To handle large sets of notes, the API supports pagination.
 
 #### Sorting
 
-The API allows sorting notes based on different fields.
+The API can be sorted based on different fields.
 
 - **Query Parameters**:
     - `sort`: The field to sort by (default: `createdAt`).
 
 - **Examples**:
-    - **URL**: `/notes?sort=-name`
-    - **Description**: Retrieves notes sorted by name in descending order using the shorthand `-name`. 
-    - **URL**: `/notes?sort=name`
-    - **Description**: Retrieves notes sorted by name in ascending order using the shorthand `name`.
+    - **URL**: `/notes?sort=-title`
+    - **Description**: Retrieves notes sorted by name in descending order using the shorthand `-title`. 
+    - **URL**: `/notes?sort=title`
+    - **Description**: Retrieves notes sorted by name in ascending order using the shorthand `title`.
