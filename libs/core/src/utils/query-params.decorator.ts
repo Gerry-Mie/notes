@@ -12,7 +12,7 @@ export class QParams {
     constructor(q: Record<string, string> = {}) {
         this.limit = parseInt(q?.limit) || 10;
         this.page = parseInt(q?.page) || 1;
-        this.sort = q?.orderBy;
+        this.sort = `${q?.sort}`;
     }
 
     @ApiPropertyOptional()
